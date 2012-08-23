@@ -12,7 +12,6 @@ class NotifyConsumer(FedmsgConsumer):
     config_key = 'fedmsg.consumers.notifyconsumer.enabled'
     def __init__(self, hub):
         self.hub = hub
-        self.DBSession = None
 
         ENABLED = self.config_key
         if not asbool(hub.config.get(ENABLED, False)):
